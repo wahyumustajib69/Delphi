@@ -85,6 +85,7 @@ object Form1: TForm1
     Width = 121
     Height = 21
     TabOrder = 0
+    OnChange = edtNilai1Change
   end
   object edtNilai2: TEdit
     Left = 72
@@ -116,6 +117,7 @@ object Form1: TForm1
     Width = 75
     Height = 25
     Caption = '&ULANGI'
+    Enabled = False
     TabOrder = 3
     OnClick = btnulangClick
   end
@@ -135,7 +137,7 @@ object Form1: TForm1
     end
     object Label6: TLabel
       Left = 8
-      Top = 48
+      Top = 72
       Width = 36
       Height = 13
       Caption = 'NILAI 2'
@@ -149,27 +151,20 @@ object Form1: TForm1
       Font.Color = clWindowText
       Font.Height = -13
       Font.Name = 'Tahoma'
-      Font.Style = []
+      Font.Style = [fsBold]
       ParentFont = False
     end
     object LblNilai2: TLabel
       Left = 64
-      Top = 48
+      Top = 72
       Width = 4
       Height = 16
       Font.Charset = DEFAULT_CHARSET
       Font.Color = clWindowText
       Font.Height = -13
       Font.Name = 'Tahoma'
-      Font.Style = []
+      Font.Style = [fsBold]
       ParentFont = False
-    end
-    object Lbl: TLabel
-      Left = 8
-      Top = 72
-      Width = 44
-      Height = 13
-      Caption = 'OPERASI'
     end
     object Label7: TLabel
       Left = 8
@@ -183,15 +178,22 @@ object Form1: TForm1
       Top = 96
       Width = 3
       Height = 13
+      Font.Charset = DEFAULT_CHARSET
+      Font.Color = clWindowText
+      Font.Height = -11
+      Font.Name = 'Tahoma'
+      Font.Style = [fsBold]
+      ParentFont = False
     end
     object cbb2: TComboBox
-      Left = 56
-      Top = 72
+      Left = 8
+      Top = 48
       Width = 137
       Height = 21
       ItemHeight = 13
       TabOrder = 0
       Text = '- PILIH -'
+      OnChange = cbb2Change
       Items.Strings = (
         'Sama Dengan           ='
         'Tidak Sama Dengan <>'

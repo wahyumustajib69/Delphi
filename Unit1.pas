@@ -23,12 +23,13 @@ type
     LblNilai1: TLabel;
     LblNilai2: TLabel;
     cbb2: TComboBox;
-    Lbl: TLabel;
     Label7: TLabel;
     LblHslLog: TLabel;
     procedure cbbChange(Sender: TObject);
     procedure edtNilai2Change(Sender: TObject);
     procedure btnulangClick(Sender: TObject);
+    procedure cbb2Change(Sender: TObject);
+    procedure edtNilai1Change(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,6 +79,33 @@ begin
   LblNilai1.Caption:='';
   LblNilai2.Caption:='';
   LblHslLog.Caption:='';
+  cbb2.Text:='- PILIH -';
+  btnulang.Enabled:=False;
+end;
+
+procedure TForm1.cbb2Change(Sender: TObject);
+begin
+if cbb2.ItemIndex=0 then
+  if LblNilai1.Caption=LblNilai2.Caption then
+  LblHslLog.Caption:='TRUE'
+  else LblHslLog.Caption:='FALSE'
+else if cbb2.ItemIndex=1 then
+  if LblNilai1.Caption<>LblNilai2.Caption then
+  LblHslLog.Caption:='TRUE'
+  else LblHslLog.Caption:='FALSE'
+else if cbb2.ItemIndex=2 then
+  if LblNilai1.Caption>LblNilai2.Caption then
+  LblHslLog.Caption:='FALSE'
+  else LblHslLog.Caption:='TRUE'
+else if cbb2.ItemIndex=3 then
+  if LblNilai1.Caption<LblNilai2.Caption then
+  LblHslLog.Caption:='FALSE'
+  else LblHslLog.Caption:='TRUE';
+end;
+
+procedure TForm1.edtNilai1Change(Sender: TObject);
+begin
+btnulang.Enabled:=True;
 end;
 
 end.
