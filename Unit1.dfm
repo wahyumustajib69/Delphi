@@ -1,6 +1,6 @@
 object Form1: TForm1
-  Left = 508
-  Top = 182
+  Left = 541
+  Top = 168
   BorderIcons = [biSystemMenu]
   BorderStyle = bsSingle
   Caption = 'Kalkulator dengan ComboBox'

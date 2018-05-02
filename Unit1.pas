@@ -43,6 +43,12 @@ begin
   )
   else if cbb.Text='Bagi       ( : )' then
         LblHasil.Caption:=CurrToStr(StrToCurr(edtNilai1.Text)/strtocurr(edtNilai2.Text)
-  );
+  )
+  else if cbb.Text='' then
+  LblHasil.Caption:=''
+  else if edtNilai1.Text='' then
+  LblHasil.Caption:=''
+  else if edtNilai2.Text='' then
+  LblHasil.Caption:='';
 end;
 end.
