@@ -17,6 +17,15 @@ type
     Label4: TLabel;
     LblHasil: TLabel;
     btnulang: TButton;
+    grp1: TGroupBox;
+    Label5: TLabel;
+    Label6: TLabel;
+    LblNilai1: TLabel;
+    LblNilai2: TLabel;
+    cbb2: TComboBox;
+    Lbl: TLabel;
+    Label7: TLabel;
+    LblHslLog: TLabel;
     procedure cbbChange(Sender: TObject);
     procedure edtNilai2Change(Sender: TObject);
     procedure btnulangClick(Sender: TObject);
@@ -49,6 +58,8 @@ begin
   )
   else if cbb.Text='' then
   LblHasil.Caption:='';
+  LblNilai1.Caption:=edtNilai1.Text;
+  LblNilai2.Caption:=edtNilai2.Text;
 end;
 procedure TForm1.edtNilai2Change(Sender: TObject);
 begin
@@ -62,6 +73,11 @@ begin
   edtNilai1.Text:='';
   edtNilai2.Text:='';
   LblHasil.Caption:='';
+  cbb.Text:='- PILIH -';
+  edtNilai1.SetFocus;
+  LblNilai1.Caption:='';
+  LblNilai2.Caption:='';
+  LblHslLog.Caption:='';
 end;
 
 end.
