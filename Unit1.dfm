@@ -1,9 +1,11 @@
 object Form1: TForm1
-  Left = 192
-  Top = 125
-  Width = 626
-  Height = 480
-  Caption = 'Form1'
+  Left = 508
+  Top = 182
+  BorderIcons = [biSystemMenu]
+  BorderStyle = bsSingle
+  Caption = 'Kalkulator dengan ComboBox'
+  ClientHeight = 301
+  ClientWidth = 329
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
   Font.Color = clWindowText
