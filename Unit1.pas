@@ -33,29 +33,16 @@ implementation
 procedure TForm1.cbbChange(Sender: TObject);
 begin
   if cbb.Text='Tambah (+)' then
-    begin
-      LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)+StrToInt(edtNilai2.Text)
+    LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)+StrToInt(edtNilai2.Text)
+  )
+  else if cbb.Text='Kurang  ( - )' then
+    LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)-StrToInt(edtNilai2.Text)
+  )
+  else if cbb.Text='Kali        ( X)' then
+    LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)*StrToInt(edtNilai2.Text)
+  )
+  else if cbb.Text='Bagi       ( : )' then
+        LblHasil.Caption:=CurrToStr(StrToCurr(edtNilai1.Text)/strtocurr(edtNilai2.Text)
   );
-    end;
-    begin
-    if cbb.Text='Kurang  ( - )' then
-      begin
-        LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)-StrToInt(edtNilai2.Text)
-  );
-      end;
-    end;
-    begin
-      if cbb.Text='Kali        ( X)' then
-      begin
-        LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)*StrToInt(edtNilai2.Text)
-  );
-      end;
-    end;
-    begin
-    if cbb.Text='Bagi       ( : )' then
-      begin
-        LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)/StrToInt(edtNilai2.Text)
-  );
-      end;
-    end;
+end;
 end.
