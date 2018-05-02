@@ -9,13 +9,14 @@ uses
 type
   TForm1 = class(TForm)
     Label1: TLabel;
-    edt1: TEdit;
+    edtNilai1: TEdit;
     Label2: TLabel;
-    edt2: TEdit;
+    edtNilai2: TEdit;
     Label3: TLabel;
     cbb: TComboBox;
     Label4: TLabel;
     LblHasil: TLabel;
+    procedure cbbChange(Sender: TObject);
   private
     { Private declarations }
   public
@@ -29,4 +30,32 @@ implementation
 
 {$R *.dfm}
 
+procedure TForm1.cbbChange(Sender: TObject);
+begin
+  if cbb.Text='Tambah (+)' then
+    begin
+      LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)+StrToInt(edtNilai2.Text)
+  );
+    end;
+    begin
+    if cbb.Text='Kurang  ( - )' then
+      begin
+        LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)-StrToInt(edtNilai2.Text)
+  );
+      end;
+    end;
+    begin
+      if cbb.Text='Kali        ( X)' then
+      begin
+        LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)*StrToInt(edtNilai2.Text)
+  );
+      end;
+    end;
+    begin
+    if cbb.Text='Bagi       ( : )' then
+      begin
+        LblHasil.Caption:=IntToStr(StrToInt(edtNilai1.Text)/StrToInt(edtNilai2.Text)
+  );
+      end;
+    end;
 end.

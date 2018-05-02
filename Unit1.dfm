@@ -55,14 +55,14 @@ object Form1: TForm1
     Font.Style = [fsBold]
     ParentFont = False
   end
-  object edt1: TEdit
+  object edtNilai1: TEdit
     Left = 64
     Top = 24
     Width = 121
     Height = 21
     TabOrder = 0
   end
-  object edt2: TEdit
+  object edtNilai2: TEdit
     Left = 64
     Top = 48
     Width = 121
@@ -77,6 +77,7 @@ object Form1: TForm1
     ItemHeight = 13
     TabOrder = 2
     Text = 'cbb'
+    OnChange = cbbChange
     Items.Strings = (
       'Tambah (+)'
       'Kurang  ( - )'
