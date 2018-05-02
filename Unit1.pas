@@ -16,7 +16,10 @@ type
     cbb: TComboBox;
     Label4: TLabel;
     LblHasil: TLabel;
+    btnulang: TButton;
     procedure cbbChange(Sender: TObject);
+    procedure edtNilai2Change(Sender: TObject);
+    procedure btnulangClick(Sender: TObject);
   private
     { Private declarations }
   public
@@ -45,10 +48,20 @@ begin
         LblHasil.Caption:=CurrToStr(StrToCurr(edtNilai1.Text)/strtocurr(edtNilai2.Text)
   )
   else if cbb.Text='' then
-  LblHasil.Caption:=''
-  else if edtNilai1.Text='' then
-  LblHasil.Caption:=''
-  else if edtNilai2.Text='' then
   LblHasil.Caption:='';
 end;
+procedure TForm1.edtNilai2Change(Sender: TObject);
+begin
+  if edtNilai2.Text='' then
+    cbb.Enabled:=False
+  else cbb.Enabled:=True;
+end;
+
+procedure TForm1.btnulangClick(Sender: TObject);
+begin
+  edtNilai1.Text:='';
+  edtNilai2.Text:='';
+  LblHasil.Caption:='';
+end;
+
 end.

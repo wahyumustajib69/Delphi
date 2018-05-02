@@ -68,20 +68,31 @@ object Form1: TForm1
     Width = 121
     Height = 21
     TabOrder = 1
+    OnChange = edtNilai2Change
   end
   object cbb: TComboBox
     Left = 64
     Top = 80
     Width = 137
     Height = 21
+    Enabled = False
     ItemHeight = 13
     TabOrder = 2
-    Text = 'cbb'
+    Text = '- PILIH -'
     OnChange = cbbChange
     Items.Strings = (
       'Tambah (+)'
       'Kurang  ( - )'
       'Kali        ( X)'
       'Bagi       ( : )')
+  end
+  object btnulang: TButton
+    Left = 24
+    Top = 144
+    Width = 75
+    Height = 25
+    Caption = '&ULANGI'
+    TabOrder = 3
+    OnClick = btnulangClick
   end
 end
